@@ -19,5 +19,19 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/[...error]': RouteRecordInfo<'/[...error]', '/:error(.*)', { error: ParamValue<true> }, { error: ParamValue<false> }>,
+    '/account-settings': RouteRecordInfo<'/account-settings', '/account-settings', Record<never, never>, Record<never, never>>,
+    '/calendar': RouteRecordInfo<'/calendar', '/calendar', Record<never, never>, Record<never, never>>,
+    '/calendar/calendarEventsAdd': RouteRecordInfo<'/calendar/calendarEventsAdd', '/calendar/calendarEventsAdd', Record<never, never>, Record<never, never>>,
+    '/calendarEvents': RouteRecordInfo<'/calendarEvents', '/calendarEvents', Record<never, never>, Record<never, never>>,
+    '/card-basic': RouteRecordInfo<'/card-basic', '/card-basic', Record<never, never>, Record<never, never>>,
+    '/cards': RouteRecordInfo<'/cards', '/cards', Record<never, never>, Record<never, never>>,
+    '/dashboard': RouteRecordInfo<'/dashboard', '/dashboard', Record<never, never>, Record<never, never>>,
+    '/form-layouts': RouteRecordInfo<'/form-layouts', '/form-layouts', Record<never, never>, Record<never, never>>,
+    '/icons': RouteRecordInfo<'/icons', '/icons', Record<never, never>, Record<never, never>>,
+    '/login': RouteRecordInfo<'/login', '/login', Record<never, never>, Record<never, never>>,
+    '/register': RouteRecordInfo<'/register', '/register', Record<never, never>, Record<never, never>>,
+    '/tables': RouteRecordInfo<'/tables', '/tables', Record<never, never>, Record<never, never>>,
+    '/typography': RouteRecordInfo<'/typography', '/typography', Record<never, never>, Record<never, never>>,
   }
 }
