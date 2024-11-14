@@ -32,35 +32,6 @@ const onChangeTime = (value) => {
 <template>
   <VRow>
     <VCol cols="12">
-
-
-      <VCard>
-        <VTabs
-          v-model="tab"
-          bg-color="primary"
-        >
-          <VTab value="one">Item One</VTab>
-          <VTab value="two">Item Two</VTab>
-          <VTab value="three">Item Three</VTab>
-        </VTabs>
-
-        <VCardText>
-          <VTabsWindow v-model="tab">
-            <VTabsWindowItem value="one">
-              One
-            </VTabsWindowItem>
-
-            <VTabsWindowItem value="two">
-              Two
-            </VTabsWindowItem>
-
-            <VTabsWindowItem value="three">
-              Three
-            </VTabsWindowItem>
-          </VTabsWindow>
-        </VCardText>
-      </VCard>
-
       <VCard title="Event details">
         <VCardText>
           <VForm class="mt-6">
