@@ -7,8 +7,20 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    DefaultLayoutWithVerticalNav: typeof import('./src/components/common/layout/DefaultLayoutWithVerticalNav.vue')['default']
+    Footer: typeof import('./src/components/common/layout/Footer.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    NavbarThemeSwitcher: typeof import('./src/components/common/layout/NavbarThemeSwitcher.vue')['default']
+    NavItems: typeof import('./src/components/common/layout/NavItems.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeSwitcher: typeof import('./src/components/common/layout/ThemeSwitcher.vue')['default']
+    UserProfile: typeof import('./src/components/common/layout/UserProfile.vue')['default']
+    VCDataTable: typeof import('./src/components/common/VCDataTable.vue')['default']
+    VCTextField: typeof import('./src/components/common/VCTextField.vue')['default']
+    VerticalNav: typeof import('./src/components/common/layout/VerticalNav.vue')['default']
+    VerticalNavLayout: typeof import('./src/components/common/layout/VerticalNavLayout.vue')['default']
+    VerticalNavLink: typeof import('./src/components/common/layout/VerticalNavLink.vue')['default']
+    VerticalNavSectionTitle: typeof import('./src/components/common/layout/VerticalNavSectionTitle.vue')['default']
   }
 }

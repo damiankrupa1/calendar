@@ -9,18 +9,16 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     VueRouter(),
     Vue({
       template: { transformAssetUrls },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
       styles: {
-        configFile: 'src/styles/settings.scss',
+        configFile: 'src/assets/styles/variables/_vuetify.scss',
       },
     }),
     Components(),
@@ -37,6 +35,12 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@core': fileURLToPath(new URL('./src/@core', import.meta.url)),
+      '@images': fileURLToPath(new URL('./src/assets/images/', import.meta.url)),
+      '@styles': fileURLToPath(new URL('./src/assets/styles/', import.meta.url)),
+      '@configured-variables': fileURLToPath(new URL('./src/assets/styles/variables/_template.scss', import.meta.url)),
+      '@axios': fileURLToPath(new URL('./src/plugins/axios',
+                import.meta.url)),
     },
     extensions: [
       '.js',
@@ -49,6 +53,6 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3000,
+    port: 4000,
   },
 })
