@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { controlledComputed } from '@vueuse/core';
+
 interface Props {
   title: string
   color?: string

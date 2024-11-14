@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useUserSessionStore } from '@/store/userSession'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
-import logo from '@images/logo.svg?raw'
+import logoLux from '@images/logoLux.png'
 import { useVuelidate } from '@vuelidate/core'
 import { email, required } from '@vuelidate/validators'
 import { computed, ref } from 'vue'
@@ -59,7 +59,7 @@ const handleSubmit = async () => {
       <VCardItem class="justify-center">
         <template #prepend>
           <div class="d-flex">
-            <div v-html="logo" />
+            <VImg :src="logoLux" />
           </div>
         </template>
 

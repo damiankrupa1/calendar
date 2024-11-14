@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import NavItems from '@/components/common/layout/NavItems.vue'
-import logo from '@images/logo.svg?raw'
 import VerticalNavLayout from '@/components/common/layout/VerticalNavLayout.vue'
+import logoLux from '@images/logoLux.png'
 
 // Components
 import Footer from '@/components/common/layout/Footer.vue'
@@ -40,9 +40,9 @@ import UserProfile from '@/components/common/layout/UserProfile.vue'
           <VIcon icon="ri-notification-line" />
         </IconBtn>
 
-        <NavbarThemeSwitcher class="me-2" />
+        <!-- <NavbarThemeSwitcher class="me-2" />
 
-        <UserProfile />
+        <UserProfile /> -->
       </div>
     </template>
 
@@ -51,10 +51,7 @@ import UserProfile from '@/components/common/layout/UserProfile.vue'
         to="/account-settings"
         class="app-logo app-title-wrapper"
       >
-        <div
-          class="d-flex"
-          v-html="logo"
-        />
+        <VImg :src="logoLux" width="60"/>
 
         <h1 class="font-weight-medium leading-normal text-xl text-uppercase">
           LuxSoftware

@@ -1,5 +1,5 @@
 /* stylelint-disable no-descending-specificity */
-@use "@configured-variables" as variables;
+@use "@/assets/styles/variables" as variables;
 @use "sass:map";
 @use "@styles/variables/vuetify";
 @use "@core/scss/base/mixins";

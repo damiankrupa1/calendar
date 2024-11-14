@@ -14,6 +14,7 @@ declare module 'vue' {
     NavItems: typeof import('./src/components/common/layout/NavItems.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeSwitcher: typeof import('./src/components/common/layout/ThemeSwitcher.vue')['default']
     UserProfile: typeof import('./src/components/common/layout/UserProfile.vue')['default']
     VCDataTable: typeof import('./src/components/common/VCDataTable.vue')['default']
     VCTextField: typeof import('./src/components/common/VCTextField.vue')['default']

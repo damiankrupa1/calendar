@@ -2,7 +2,9 @@
 import type { Component } from 'vue'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import { useDisplay } from 'vuetify'
-import logo from '@images/logo.svg?raw'
+import logoLux from '@images/logoLux.png'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 interface Props {
   tag?: string | Component
@@ -59,10 +61,11 @@ const handleNavScroll = (evt: Event) => {
           to="/account-settings"
           class="app-logo app-title-wrapper"
         >
-          <div
+          <VImg :src="logoLux" />
+          <!-- <div
             class="d-flex"
-            v-html="logo"
-          />
+            v-html="logoLux"
+          /> -->
 
           <h1 class="font-weight-medium leading-normal text-xl text-uppercase">
             LuxSoftware
@@ -107,7 +110,7 @@ const handleNavScroll = (evt: Event) => {
 </style>
 
 <style lang="scss">
-@use "@configured-variables" as variables;
+@use "@/assets/styles/variables" as variables;
 @use "@styles/_mixins";
 
 // 👉 Vertical Nav

@@ -1,7 +1,7 @@
 @use "mixins";
 @use "@layouts/styles/placeholders";
 @use "@styles/_mixins" as layoutMixins;
-@use "@configured-variables" as variables;
+@use "@/assets/styles/variables" as variables;
 @use "@styles/variables/_vuetify.scss" as vuetify;
 
 // 👉 Avatar group

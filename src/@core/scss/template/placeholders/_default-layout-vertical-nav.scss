@@ -1,4 +1,4 @@
-@use "@configured-variables" as variables;
+@use "@/assets/styles/variables" as variables;
 @use "@core/scss/base/mixins";
 
 %default-layout-vertical-nav-floating-navbar-and-sticky-elevated-navbar-scrolled {
