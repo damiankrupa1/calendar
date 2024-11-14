@@ -25,12 +25,14 @@
         :location="$vuetify.display.mobile ? 'bottom' : undefined"
         temporary
       >
-        <VList
-          :items="items"
-        ></VList>
+        <VList>
+          <VListItem v-for="item in items" :key="item.to">
+            <VListItem :title="item.title" :to="item.to" variant="plain"/>
+          </VListItem>
+        </VList>
       </VNavigationDrawer>
 
-      <VMain style="height: 500px;">
+      <VMain style="height: 100vh">
         <slot />
       </VMain>
     </VLayout>
@@ -41,20 +43,34 @@ import { ref, watch } from 'vue'
 
 const items =  ref([
   {
-    title: 'Foo',
-    value: 'foo',
+    title: 'Account Settings',
+    icon: 'ri-user-settings-line',
+    to: '/account-settings',
   },
   {
-    title: 'Bar',
-    value: 'bar',
+    title: 'Calendar',
+    icon: 'ri-calendar-view',
+    to: '/calendar',
   },
   {
-    title: 'Fizz',
-    value: 'fizz',
+    title: 'Calendar events',
+    icon: 'ri-calendar-view',
+    to: '/calendar-events',
   },
   {
-    title: 'Buzz',
-    value: 'buzz',
+    title: 'Login',
+    icon: 'ri-login-box-line',
+    to: '/login',
+  },
+  {
+    title: 'Error',
+    icon: 'ri-information-line',
+    to: '/no-existence',
+  },
+  {
+    title: 'Tables',
+    icon: 'ri-table-alt-line',
+    to: '/tables',
   },
 ]);
 const group = ref(null);

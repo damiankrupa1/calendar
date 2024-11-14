@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import NavItems from '@/components/common/layout/NavItems.vue'
 import VerticalNavLayout from '@/components/common/layout/VerticalNavLayout.vue'
 import logoLux from '@images/logoLux.png'
 
@@ -46,7 +45,7 @@ import UserProfile from '@/components/common/layout/UserProfile.vue'
       </div>
     </template>
 
-    <template #vertical-nav-header="{ toggleIsOverlayNavActive }">
+    <!-- <template #vertical-nav-header="{ toggleIsOverlayNavActive }">
       <RouterLink
         to="/account-settings"
         class="app-logo app-title-wrapper"
@@ -64,11 +63,7 @@ import UserProfile from '@/components/common/layout/UserProfile.vue'
       >
         <VIcon icon="ri-close-line" />
       </IconBtn>
-    </template>
-
-    <template #vertical-nav-content>
-      <NavItems />
-    </template>
+    </template> -->
 
     <slot />
 
