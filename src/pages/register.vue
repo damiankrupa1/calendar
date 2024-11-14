@@ -142,7 +142,7 @@ const handleSubmit = async () => {
               </RouterLink>
             </VCol>
 
-            <VCol
+            <!-- <VCol
               cols="12"
               class="d-flex align-center"
             >
@@ -151,13 +151,12 @@ const handleSubmit = async () => {
               <VDivider />
             </VCol>
 
-            <!-- auth providers -->
             <VCol
               cols="12"
               class="text-center"
             >
               <AuthProvider />
-            </VCol>
+            </VCol> -->
           </VRow>
         </VForm>
       </VCardText>

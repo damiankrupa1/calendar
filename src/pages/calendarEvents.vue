@@ -4,6 +4,7 @@ import { axiosInstance } from '@/plugins/axios';
 import { crudCalendarEvents } from '@/types/Crud/crudCalendarEvents';
 import { crudResponse } from '@/types/crud';
 import { AxiosResponse } from 'axios';
+import { computed, ref } from 'vue';
 
 let loading = ref(false);
 let calendarEvents = ref<AxiosResponse<crudResponse<crudCalendarEvents>>>();
@@ -62,7 +63,7 @@ const loadItems = async () => {
             </VBtn>
           </VCol>
         </VRow>
-        <VCDataTable 
+        <VCDataTable
           :loading="loading"
           :headers="headers"
           :items-length="totalItems"

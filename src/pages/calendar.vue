@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Qalendar } from "qalendar";
+import { ref } from "vue";
 
 const events = ref([
   {
@@ -33,7 +34,7 @@ const config = ref({
   locale: 'pl-PL',
   defaultMode: 'week',
   isSilent: true,
-  showCurrentTime: true, 
+  showCurrentTime: true,
 })
 
 </script>
@@ -42,7 +43,7 @@ const config = ref({
   <VRow>
     <VCol cols="12">
       <VCard title="Calendar">
-        <Qalendar 
+        <Qalendar
           :events="events"
           :config="config"
         />

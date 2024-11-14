@@ -111,12 +111,12 @@ const handleSubmit = async () => {
                   label="Remember me"
                 />
 
-                <a
+                <!-- <a
                   class="ms-2 mb-1"
                   href="javascript:void(0)"
                 >
                   Forgot Password?
-                </a>
+                </a> -->
               </div>
 
               <VBtn
