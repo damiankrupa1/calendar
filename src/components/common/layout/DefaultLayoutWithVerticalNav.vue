@@ -4,8 +4,6 @@ import logoLux from '@images/logoLux.png'
 
 // Components
 import Footer from '@/components/common/layout/Footer.vue'
-import NavbarThemeSwitcher from '@/components/common/layout/NavbarThemeSwitcher.vue'
-import UserProfile from '@/components/common/layout/UserProfile.vue'
 </script>
 
 <template>

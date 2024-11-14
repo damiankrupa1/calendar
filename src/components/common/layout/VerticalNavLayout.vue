@@ -7,17 +7,12 @@
       >
         <VAppBarNavIcon variant="text" @click.stop="drawer = !drawer"></VAppBarNavIcon>
 
-        <VToolbarTitle>My files</VToolbarTitle>
+        <VToolbarTitle>LuxSoftware</VToolbarTitle>
 
         <VSpacer></VSpacer>
 
-        <template v-if="$vuetify.display.mdAndUp">
-          <VBtn icon="mdi-magnify" variant="text"></VBtn>
-
-          <VBtn icon="mdi-filter" variant="text"></VBtn>
-        </template>
-
-        <VBtn icon="mdi-dots-vertical" variant="text"></VBtn>
+        <NavbarThemeSwitcher />
+        <UserProfile />
       </VAppBar>
 
       <VNavigationDrawer
@@ -40,6 +35,8 @@
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
+import NavbarThemeSwitcher from '@/components/common/layout/NavbarThemeSwitcher.vue'
+import UserProfile from '@/components/common/layout/UserProfile.vue'
 
 const items =  ref([
   {
