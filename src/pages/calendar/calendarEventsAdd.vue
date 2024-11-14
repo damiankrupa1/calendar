@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { inject } from 'vue';
+import { inject, ref } from 'vue';
 import { VTextField } from 'vuetify/lib/components/index.mjs';
 
 const dayJS = inject("dayJS")
@@ -33,33 +33,33 @@ const onChangeTime = (value) => {
   <VRow>
     <VCol cols="12">
 
-      
-      <v-card>
-        <v-tabs
+
+      <VCard>
+        <VTabs
           v-model="tab"
           bg-color="primary"
         >
-          <v-tab value="one">Item One</v-tab>
-          <v-tab value="two">Item Two</v-tab>
-          <v-tab value="three">Item Three</v-tab>
-        </v-tabs>
+          <VTab value="one">Item One</VTab>
+          <VTab value="two">Item Two</VTab>
+          <VTab value="three">Item Three</VTab>
+        </VTabs>
 
-        <v-card-text>
-          <v-tabs-window v-model="tab">
-            <v-tabs-window-item value="one">
+        <VCardText>
+          <VTabsWindow v-model="tab">
+            <VTabsWindowItem value="one">
               One
-            </v-tabs-window-item>
+            </VTabsWindowItem>
 
-            <v-tabs-window-item value="two">
+            <VTabsWindowItem value="two">
               Two
-            </v-tabs-window-item>
+            </VTabsWindowItem>
 
-            <v-tabs-window-item value="three">
+            <VTabsWindowItem value="three">
               Three
-            </v-tabs-window-item>
-          </v-tabs-window>
-        </v-card-text>
-      </v-card>
+            </VTabsWindowItem>
+          </VTabsWindow>
+        </VCardText>
+      </VCard>
 
       <VCard title="Event details">
         <VCardText>

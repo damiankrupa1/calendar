@@ -17,10 +17,10 @@
     "core-js": "^3.37.1",
     "dayjs": "^1.11.13",
     "pinia": "^2.2.5",
+    "qalendar": "^3.8.1",
     "roboto-fontface": "*",
     "vue": "^3.4.31",
     "vue3-perfect-scrollbar": "^2.0.0",
-    "qalendar": "^3.8.1",
     "vuetify": "^3.6.11"
   },
   "devDependencies": {

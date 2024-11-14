@@ -4,6 +4,7 @@ import { axiosInstance } from '@/plugins/axios';
 import { crudUser } from '@/types/Crud/crudUser';
 import { crudResponse } from '@/types/crud';
 import { AxiosResponse } from 'axios';
+import { computed, ref } from 'vue';
 
 let loading = ref(false);
 let users = ref<AxiosResponse<crudResponse<crudUser>>>();
@@ -47,7 +48,7 @@ const loadItems = async () => {
   <VRow>
     <VCol cols="12">
       <VCard title="Users">
-        <VCDataTable 
+        <VCDataTable
           :loading="loading"
           :headers="headers"
           :items-length="totalItems"
