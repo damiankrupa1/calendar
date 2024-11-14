@@ -27,7 +27,7 @@
         </VList>
       </VNavigationDrawer>
 
-      <VMain style="height: 100vh">
+      <VMain style="min-height: 100vh;">
         <slot />
       </VMain>
     </VLayout>
