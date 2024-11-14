@@ -5,6 +5,7 @@ import { crudCalendarEvents } from '@/types/Crud/crudCalendarEvents';
 import { crudResponse } from '@/types/crud';
 import { AxiosResponse } from 'axios';
 import { computed, ref } from 'vue';
+import { router } from "@/plugins/router/index";
 
 let loading = ref(false);
 let calendarEvents = ref<AxiosResponse<crudResponse<crudCalendarEvents>>>();
@@ -30,6 +31,10 @@ const headers = ref([
     title: 'Color',
     key: 'color',
   },
+  {
+    title: '',
+    key: 'actions'
+  }
 ])
 
 const totalItems = computed(() => {
@@ -45,6 +50,10 @@ const loadItems = async () => {
   calendarEvents.value = await axiosInstance.get('/calendar');
   loading.value = false;
   return calendarEvents;
+}
+
+const handleEdit = (id: string) => {
+  router.push({name: 'login'})
 }
 </script>
 
@@ -69,7 +78,12 @@ const loadItems = async () => {
           :items-length="totalItems"
           :items="items"
           @update:options="loadItems"
-        />
+        >
+          <template #item.actions="{item}">
+              <VIcon @click="handleEdit(item.id)" class="pointer" icon="mdi-pencil" />
+              <VIcon class="pointer ml-3" icon="mdi-delete" />
+          </template>
+        </VCDataTable>
       </VCard>
     </VCol>
   </VRow>

@@ -50,6 +50,15 @@ export const routes = [
         },
       },
       {
+        path: 'calendar-events-edit',
+        name: 'editCalendarEvents',
+        component: () => import('@/pages/calendar/calendarEventsEdit.vue'),
+        meta: {
+          auth: true,
+          redirect: '/login'
+        },
+      },
+      {
         path: 'typography',
         name: 'typography',
         component: () => import('@/pages/typography.vue'),

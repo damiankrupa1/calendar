@@ -23,6 +23,8 @@ declare module 'vue-router/auto-routes' {
     '/account-settings': RouteRecordInfo<'/account-settings', '/account-settings', Record<never, never>, Record<never, never>>,
     '/calendar': RouteRecordInfo<'/calendar', '/calendar', Record<never, never>, Record<never, never>>,
     '/calendar/calendarEventsAdd': RouteRecordInfo<'/calendar/calendarEventsAdd', '/calendar/calendarEventsAdd', Record<never, never>, Record<never, never>>,
+    '/calendar/calendarEventsEdit': RouteRecordInfo<'/calendar/calendarEventsEdit', '/calendar/calendarEventsEdit', Record<never, never>, Record<never, never>>,
+    '/calendar/calendarEventsForm': RouteRecordInfo<'/calendar/calendarEventsForm', '/calendar/calendarEventsForm', Record<never, never>, Record<never, never>>,
     '/calendarEvents': RouteRecordInfo<'/calendarEvents', '/calendarEvents', Record<never, never>, Record<never, never>>,
     '/card-basic': RouteRecordInfo<'/card-basic', '/card-basic', Record<never, never>, Record<never, never>>,
     '/cards': RouteRecordInfo<'/cards', '/cards', Record<never, never>, Record<never, never>>,
