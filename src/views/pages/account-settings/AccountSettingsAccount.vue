@@ -11,32 +11,10 @@ const accountData = {
   address: '123 Main St, New York, NY 10001',
 }
 
-const refInputEl = ref<HTMLElement>()
-
 const accountDataLocal = ref(structuredClone(accountData))
-const isAccountDeactivated = ref(false)
 
 const resetForm = () => {
   accountDataLocal.value = structuredClone(accountData)
-}
-
-// changeAvatar function
-const changeAvatar = (file: Event) => {
-  const fileReader = new FileReader()
-  const { files } = file.target as HTMLInputElement
-
-  if (files && files.length) {
-    fileReader.readAsDataURL(files[0])
-    fileReader.onload = () => {
-      if (typeof fileReader.result === 'string')
-        accountDataLocal.value.avatarImg = fileReader.result
-    }
-  }
-}
-
-// reset avatar image
-const resetAvatar = () => {
-  accountDataLocal.value.avatarImg = accountData.avatarImg
 }
 
 </script>
@@ -49,34 +27,32 @@ const resetAvatar = () => {
         <VDivider />
 
         <VCardText>
-          <!-- 👉 Form -->
           <VForm class="mt-6">
             <VRow>
-              <!-- 👉 First Name -->
               <VCol
                 md="6"
                 cols="12"
               >
                 <VTextField
                   v-model="accountDataLocal.firstName"
-                  placeholder="John"
                   label="First Name"
+                  density="compact"
+                  variant="outlined"
                 />
               </VCol>
 
-              <!-- 👉 Last Name -->
               <VCol
                 md="6"
                 cols="12"
               >
                 <VTextField
                   v-model="accountDataLocal.lastName"
-                  placeholder="Doe"
                   label="Last Name"
+                  density="compact"
+                  variant="outlined"
                 />
               </VCol>
 
-              <!-- 👉 Email -->
               <VCol
                 cols="12"
                 md="6"
@@ -84,12 +60,12 @@ const resetAvatar = () => {
                 <VTextField
                   v-model="accountDataLocal.email"
                   label="E-mail"
-                  placeholder="johndoe@gmail.com"
                   type="email"
+                  density="compact"
+                  variant="outlined"
                 />
               </VCol>
 
-              <!-- 👉 Phone -->
               <VCol
                 cols="12"
                 md="6"
@@ -97,11 +73,11 @@ const resetAvatar = () => {
                 <VTextField
                   v-model="accountDataLocal.phone"
                   label="Phone Number"
-                  placeholder="+1 (917) 543-9876"
+                  density="compact"
+                  variant="outlined"
                 />
               </VCol>
 
-              <!-- 👉 Address -->
               <VCol
                 cols="12"
                 md="6"
@@ -109,11 +85,11 @@ const resetAvatar = () => {
                 <VTextField
                   v-model="accountDataLocal.address"
                   label="Address"
-                  placeholder="123 Main St, New York, NY 10001"
+                  density="compact"
+                  variant="outlined"
                 />
               </VCol>
 
-              <!-- 👉 Form Actions -->
               <VCol
                 cols="12"
                 class="d-flex flex-wrap gap-4"
